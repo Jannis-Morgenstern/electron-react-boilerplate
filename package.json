@@ -1,14 +1,23 @@
 {
 	"name": "electron-react",
 	"version": "0.1.0",
-	"main": "public/Main.js",
+	"main": "./public/Main.js",
+	"homepage": "./",
 	"private": true,
+	"build": {
+		"appId": "nonExistentID",
+		"files": [
+			"./build/**/*"
+		],
+		"directories": {
+			"buildResources": "assets"
+		}
+	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
 		"concurrently": "^5.3.0",
-		"electron": "^10.1.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.3"
@@ -19,7 +28,10 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"electron-start": "electron .",
-		"react-start": "react-scripts start"
+		"react-start": "react-scripts start",
+		"preelectron-pack": "npm run build",
+		"electron-pack": "electron-builder -c.extraMetadata.main=build/Main.js",
+		"pack": "npm run preelectron-pack && npm run electron-pack"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -37,6 +49,7 @@
 		]
 	},
 	"devDependencies": {
-		"electron": "^10.1.2"
+		"electron": "^10.1.2",
+		"electron-builder": "^22.8.0"
 	}
 }
