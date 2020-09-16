@@ -8,6 +8,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm start`
 
+## Build
+
+### `npm run preelectron-pack`
+
+### `npm run electron-pack`
+
+### `npm run build`
+
 ## Available Scripts
 
 In the project directory, you can run:

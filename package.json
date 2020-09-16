@@ -24,14 +24,13 @@
 	},
 	"scripts": {
 		"start": "concurrently \"npm run react-start\" \"npm run electron-start\"",
-		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"electron-start": "electron .",
 		"react-start": "react-scripts start",
-		"preelectron-pack": "npm run build",
+		"preelectron-pack": "react-scripts build",
 		"electron-pack": "electron-builder -c.extraMetadata.main=build/Main.js",
-		"pack": "npm run preelectron-pack && npm run electron-pack"
+		"build": "npm run preelectron-pack && npm run electron-pack"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
