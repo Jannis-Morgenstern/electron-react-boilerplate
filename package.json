@@ -24,7 +24,7 @@
 		"react-scripts": "3.4.3"
 	},
 	"scripts": {
-		"start": "cross-env NODE_ENV=development concurrently \"npm run react-start\" \"npm run electron-start\"",
+		"start": "cross-env NODE_ENV=development concurrently \"npm run electron-start\" \"npm run react-start\"",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"electron-start": "electron .",
