@@ -10,10 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Build
 
-### `npm run preelectron-pack`
-
-### `npm run electron-pack`
-
 ### `npm run build`
 
 ## Available Scripts
