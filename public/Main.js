@@ -24,7 +24,7 @@ const createWindow = () => {
 	} else {
 		indexPath = url.format({
 			protocol: 'file:',
-			host: path.join(__dirname, '../build/index.html'),
+			host: path.join(__dirname, '../build', 'index.html'),
 			slashes: true,
 		});
 	}
